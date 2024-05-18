@@ -4,10 +4,10 @@
     "slug": "perfil3",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/gato.jpg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/gato.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
