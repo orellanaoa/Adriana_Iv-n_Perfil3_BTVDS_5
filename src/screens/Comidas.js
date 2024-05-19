@@ -46,6 +46,8 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#FFF',
         paddingTop: 20,
+        //Utilizamos el operador OR (||) para definir una altura en caso que en otro dispositivo que no
+        // tenga la propiedad statusBar 
         marginTop: StatusBar.currentHeight || 30,
     },
     titleContainer: {

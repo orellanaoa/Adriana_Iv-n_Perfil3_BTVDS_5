@@ -2,6 +2,7 @@ import React from 'react';
 import { View, TouchableOpacity, StyleSheet, Text, Image } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
+//Imagen de gatito que se muestra en la pantalla de bienvenida
 const image = require('../img/gatito.jpg'); 
 
 const Home = ({ navigation }) => {
