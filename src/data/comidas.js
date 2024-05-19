@@ -46,7 +46,7 @@ export const Comida = [
             {
                 id: 7,
                 nombre: "Salmón",
-                descripcion: "Pescado suave y firme, rico en omega-3. Se cocina a la parrilla, al horno o ahumado. Acompañado de vegetales o arroz.",
+                descripcion: "Pescado suave y firme, rico en omega-3. Se cocina a la parrilla, al horno o ahumado. Acompañado de vegetales o arroz (o de papitas fritas).",
                 src: require("../img/salmon.jpg")
             },
             {
