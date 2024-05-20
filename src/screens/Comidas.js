@@ -1,21 +1,17 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, Dimensions, FlatList, ScrollView } from 'react-native';
+import { View, Text, Dimensions, FlatList, ScrollView, StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { Comida } from '../data/comidas';
+    //Referencia del archivo cardComida, donde guardamos el estilo de las cards
+import CardComida from '../components/cardComida.js';
 
 const { width } = Dimensions.get('window');
 
 const Comidas = () => {
-
     const cardWidth = (width - 60) / 2;
 
-    const renderComida = ({ item }) => (
-        <View style={[styles.cardContainer, { width: cardWidth }]}>
-            <Image source={item.src} style={styles.image} />
-            <Text style={styles.title}>{item.nombre}</Text>
-            <Text style={styles.descripcion}>{item.descripcion}</Text>
-        </View>
-    );
+
+    const renderComida = ({ item }) => <CardComida item={item} cardWidth={cardWidth} />;
 
     return (
         <ScrollView style={styles.container}>
@@ -46,8 +42,6 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#FFF',
         paddingTop: 20,
-        //Utilizamos el operador OR (||) para definir una altura en caso que en otro dispositivo que no
-        // tenga la propiedad statusBar 
         marginTop: StatusBar.currentHeight || 30,
     },
     titleContainer: {
@@ -71,43 +65,6 @@ const styles = StyleSheet.create({
     flatListContent: {
         flexGrow: 1,
     },
-    cardContainer: {
-        backgroundColor: '#DEA47E',
-        borderRadius: 8,
-        borderWidth: 1,
-        borderColor: '#ccc',
-        padding: 10,
-        marginBottom: 10,
-        marginHorizontal: 5,
-        shadowColor: '#000',
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    image: {
-        width: 100,
-        height: 100,
-        marginBottom: 10,
-        borderRadius: 8,
-    },
-    title: {
-        fontSize: 16,
-        fontWeight: '600',
-        color: '#FFF',
-        textAlign: 'center'
-    },
-    descripcion: {
-        fontSize: 12,
-        fontWeight: '600',
-        textAlign: 'center',
-        color: '#FFF'
-    },
     nombre: {
         fontSize: 18,
         fontWeight: 'bold',
@@ -115,4 +72,6 @@ const styles = StyleSheet.create({
         color: '#000',
         marginBottom: 10,
     }
+
+    //Ya no se muestran los estilos de las cards, ya que están en su propio archivo.
 });
